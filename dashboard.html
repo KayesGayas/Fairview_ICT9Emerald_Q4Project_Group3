@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hogwarts Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    background: radial-gradient(circle at top, #2a1a0f, #000);
+    color: #f5e6c8;
+}
+
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(20, 15, 10, 0.95);
+    border: 1px solid #c8a24a;
+    box-shadow: 0 0 15px rgba(200,162,74,0.3);
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.logo {
+    width: 90px;
+}
+
+.sidebar small {
+    color: #c8a24a;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.sidebar ul li a {
+    color: #f5e6c8;
+    text-decoration: none;
+}
+
+.sidebar ul li:hover {
+    background: rgba(200,162,74,0.15);
+}
+
+.active {
+    background: #c8a24a;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 10px;
+    background: #c8a24a;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e0bb5c;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+h1 {
+    color: #c8a24a;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    padding: 60px 20px;
+    border-radius: 14px;
+    color: white;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid rgba(200,162,74,0.4);
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.card * {
+    position: relative;
+}
+
+/* HOUSE THEMES */
+.gryffindor { background:url('https://i.pinimg.com/736x/3e/93/64/3e93645bceadf2750200428282006d16.jpg'); background-size:cover;}
+.slytherin { background:url('https://i.pinimg.com/1200x/db/ae/62/dbae6219110a6baafb038a2b6e8f5239.jpg'); background-size:cover;}
+.ravenclaw { background:url('https://i.pinimg.com/1200x/67/2d/da/672ddadbf83b37f24d530a87c11b0c8d.jpg'); background-size:cover;}
+.hufflepuff { background:url('https://i.pinimg.com/736x/67/49/82/674982dbf5f93420c640524eba710aab.jpg'); background-size:cover;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="sidebar">
+
+<div>
+<img src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/200?cb=20110806202805" class="logo">
+
+<h2>Hogwarts Portal</h2>
+<small>School of Witchcraft & Wizardry</small>
+
+<ul>
+        <li><a href="tasks.html">📜 Tasks</a></li>
+        <li><a href="dashboard.html">📁 Dashboard</a></li>
+        <li><a href="notebooks.html">📓 Spellbook</a></li>
+        <li><a href="profile.html">🧙 Profile</a></li>
+    </ul>
+</div>
+
+<a href="index.html" class="btn">➡️ Log out</a>
+
+</div>
+
+<div class="content">
+
+<h1>Houses</h1>
+
+<div class="grid">
+<div class="card gryffindor">🦁 Gryffindor</div>
+<div class="card slytherin">🐍 Slytherin</div>
+<div class="card ravenclaw">🦅 Ravenclaw</div>
+<div class="card hufflepuff">🦡 Hufflepuff</div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
