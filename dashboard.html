@@ -12,18 +12,27 @@ body {
     color: #f5e6c8;
 }
 
-.container {
+/* MAIN LAYOUT */
+.wrapper {
     display: flex;
+    min-height: 100vh;
 }
 
+.container {
+    display: flex;
+    flex: 1;
+}
 
+/* SIDEBAR */
 .sidebar {
     width: 220px;
     background: linear-gradient(180deg, #2b1b0e, #1a1208);
-    height: 100vh;
     padding: 20px;
     text-align: center;
     border-right: 2px solid #c9a44c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .logo {
@@ -79,10 +88,15 @@ body {
     background: #e0bb5c;
 }
 
+/* RIGHT SIDE */
+.right-side {
+    flex: 1;
+    padding: 20px;
+}
+
 /* CONTENT */
 .content {
-    flex: 1;
-    padding: 30px;
+    min-height: calc(100vh - 40px);
 }
 
 h1 {
@@ -106,6 +120,11 @@ h1 {
     border: 1px solid rgba(200,162,74,0.4);
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
     overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
 }
 
 .card::before {
@@ -119,16 +138,16 @@ h1 {
     position: relative;
 }
 
+/* FOOTER */
 .footer {
     background: rgba(20, 15, 10, 0.95);
     border-top: 2px solid #c8a24a;
     color: #c8a24a;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
-    border-radius: 15px 15px 0 0;
     font-family: 'Cinzel', serif;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .footer h5 {
@@ -147,54 +166,80 @@ h1 {
     color: #8f6b1d;
 }
 
-
 /* HOUSE THEMES */
-.gryffindor { background:url('https://i.pinimg.com/736x/3e/93/64/3e93645bceadf2750200428282006d16.jpg'); background-size:cover;}
-.slytherin { background:url('https://i.pinimg.com/1200x/db/ae/62/dbae6219110a6baafb038a2b6e8f5239.jpg'); background-size:cover;}
-.ravenclaw { background:url('https://i.pinimg.com/1200x/67/2d/da/672ddadbf83b37f24d530a87c11b0c8d.jpg'); background-size:cover;}
-.hufflepuff { background:url('https://i.pinimg.com/736x/67/49/82/674982dbf5f93420c640524eba710aab.jpg'); background-size:cover;}
+.gryffindor {
+    background:url('https://i.pinimg.com/736x/3e/93/64/3e93645bceadf2750200428282006d16.jpg');
+    background-size: cover;
+}
+
+.slytherin {
+    background:url('https://i.pinimg.com/1200x/db/ae/62/dbae6219110a6baafb038a2b6e8f5239.jpg');
+    background-size: cover;
+}
+
+.ravenclaw {
+    background:url('https://i.pinimg.com/1200x/67/2d/da/672ddadbf83b37f24d530a87c11b0c8d.jpg');
+    background-size: cover;
+}
+
+.hufflepuff {
+    background:url('https://i.pinimg.com/736x/67/49/82/674982dbf5f93420c640524eba710aab.jpg');
+    background-size: cover;
+}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-<div class="sidebar">
+    <div class="container">
 
-<div>
-<img src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/200?cb=20110806202805" class="logo">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
 
-<h2>Hogwarts Portal</h2>
-<small>School of Witchcraft & Wizardry</small>
+            <div>
+                <img src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/200?cb=20110806202805" class="logo">
 
-<ul>
-        <li><a href="tasks.html">📜 Tasks</a></li>
-        <li><a href="dashboard.html">📁 Dashboard</a></li>
-        <li><a href="notebooks.html">📓 Spellbook</a></li>
-        <li><a href="profile.html">🧙 Profile</a></li>
-    </ul>
+                <h2>Hogwarts Portal</h2>
+                <small>School of Witchcraft & Wizardry</small>
+
+                <ul>
+                    <li><a href="tasks.html">📜 Tasks</a></li>
+                    <li><a href="dashboard.html">📁 Dashboard</a></li>
+                    <li><a href="notebooks.html">📓 Spellbook</a></li>
+                    <li><a href="profile.html">🧙 Profile</a></li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="btn">➡️ Log out</a>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-side">
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <h1>Houses</h1>
+
+                <div class="grid">
+                    <div class="card gryffindor">🦁 Gryffindor</div>
+                    <div class="card slytherin">🐍 Slytherin</div>
+                    <div class="card ravenclaw">🦅 Ravenclaw</div>
+                    <div class="card hufflepuff">🦡 Hufflepuff</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </div>
 
-<a href="index.html" class="btn">➡️ Log out</a>
-
-</div>
-
-<div class="content">
-
-<h1>Houses</h1>
-
-<div class="grid">
-<div class="card gryffindor">🦁 Gryffindor</div>
-<div class="card slytherin">🐍 Slytherin</div>
-<div class="card ravenclaw">🦅 Ravenclaw</div>
-<div class="card hufflepuff">🦡 Hufflepuff</div>
-</div>
-
-</div>
-
-</div>
-
+<!-- FOOTER -->
 <footer class="footer">
 
     <h5>⚡ Hogwarts Portal ⚡</h5>
@@ -208,7 +253,6 @@ h1 {
     </small>
 
 </footer>
-
 
 </body>
 </html>
