@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Page</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    display: flex;
+    background-color: #0E0E0E;
+    margin: 0;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(20, 15, 10, 0.95);
+    border: 1px solid #c8a24a;
+    box-shadow: 0 0 15px rgba(200,162,74,0.3);
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.logo { width: 90px; }
+
+.sidebar small {
+    color: #c8a24a;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.sidebar ul li a {
+    color: #f5e6c8;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li:hover {
+    background: rgba(200,162,74,0.15);
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 10px;
+    background: #c8a24a;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+    flex: 1;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(14,14,14);
+    border: 2px solid #c8a24a;
+    color: white;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+/* TEXT STYLE */
+.title {
+    font-family: 'Cinzel', serif;
+    font-weight: 1000;
+    color: #c8a24a;
+}
+
+.label {
+    font-weight: 900;
+    font-family: 'Cinzel', serif;
+    color: #c8a24a;
+}
+
+.value {
+    font-family: 'Cinzel', serif;
+    color: #553d05;
+}
+
+.upload-btn {
+    background-color: #553d05;
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 225px;
+    color: #c8a24a;
+    font-family: 'Cinzel', serif;
+    display: block;
+    margin: 10px auto;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <div>
+        <img src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/200?cb=20110806202805" class="logo">
+
+        <h2 style="color:#FCE9C9; font-family:'Cinzel', serif;">Hogwarts Portal</h2>
+        <small style="font-family:'Cinzel', serif;">School of Witchcraft & Wizardry</small>
+
+        <ul>
+            <li><a href="tasks.html">📜 Tasks</a></li>
+            <li><a href="dashboard.html">📁 Dashboard</a></li>
+            <li><a href="notebooks.html">📓 Spellbook</a></li>
+            <li><a href="profile.html">🧙 Profile</a></li>
+        </ul>
+    </div>
+
+    <a href="index.html" class="btn">➡️ Log out</a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-container">
+
+    <h1 class="title">Profile</h1>
+
+    <img src="https://i.pinimg.com/736x/03/40/51/034051eab22d82413d0a11a9f1f60b7c.jpg" class="profile-img">
+
+    <button class="upload-btn" onclick="alert('You have uploaded your profile picture')">
+        Upload Photo
+    </button>
+
+    <h2 class="label">House</h2>
+    <h4 class="value">🐦‍⬛ Ravenclaw 🐦‍⬛</h4>
+
+    <h2 class="label">Name</h2>
+    <h4 class="value">Kaienne Camlasco</h4>
+
+    <h2 class="label">Age</h2>
+    <h4 class="value">14 years old</h4>
+
+    <h2 class="label">Birthday</h2>
+    <h4 class="value">January 7, 2011</h4>
+
+    <h2 class="label">School Year</h2>
+    <h4 class="value">Fourth year student</h4>
+
+    <h2 class="label">Clubs</h2>
+    <h4 class="value">Quidditch Varsity</h4>
+
+</div>
+
+</body>
+</html>
