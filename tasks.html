@@ -55,16 +55,11 @@ body {
 .sidebar ul li a {
     color: #f5e6c8;
     text-decoration: none;
+    display: block;
 }
 
 .sidebar ul li:hover {
     background: rgba(200,162,74,0.15);
-}
-
-.active {
-    background: #c8a24a;
-    color: #000;
-    font-weight: bold;
 }
 
 .btn {
@@ -90,16 +85,16 @@ h1 {
     color: #c8a24a;
 }
 
+/* FOOTER (Hogwarts style consistent) */
 .footer {
     background: rgba(20, 15, 10, 0.95);
     border-top: 2px solid #c8a24a;
     color: #c8a24a;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
-    border-radius: 15px 15px 0 0;
     font-family: 'Cinzel', serif;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .footer h5 {
@@ -117,7 +112,6 @@ h1 {
     margin-top: 10px;
     color: #8f6b1d;
 }
-
 </style>
 </head>
 
@@ -125,37 +119,38 @@ h1 {
 
 <div class="container">
 
-<div class="sidebar">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
 
-<div>
-<img src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/200?cb=20110806202805" class="logo">
+        <div>
+            <img src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/200?cb=20110806202805" class="logo">
 
-<h2>Hogwarts Portal</h2>
-<small>School of Witchcraft & Wizardry</small>
+            <h2>Hogwarts Portal</h2>
+            <small>School of Witchcraft & Wizardry</small>
 
-<ul>
+            <ul>
+                <li><a href="tasks.html">📜 Tasks</a></li>
+                <li><a href="dashboard.html">📁 Dashboard</a></li>
+                <li><a href="notebooks.html">📓 Spellbook</a></li>
+                <li><a href="profile.html">🧙 Profile</a></li>
+            </ul>
+        </div>
 
-<ul>
-        <li><a href="tasks.html">📜 Tasks</a></li>
-        <li><a href="dashboard.html">📁 Dashboard</a></li>
-        <li><a href="notebooks.html">📓 Spellbook</a></li>
-        <li><a href="profile.html">🧙 Profile</a></li>
-    </ul>
+        <a href="index.html" class="btn">➡️ Log out</a>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <h1>📜 Tasks</h1>
+        <p>You have no task to do ✨</p>
+
+    </div>
+
 </div>
 
-<a href="index.html" class="btn">➡️ Log out</a>
-
-</div>
-
-<div class="content">
-
-<h1>📜 Tasks</h1>
-<p>You have no task to do ✨</p>
-
-</div>
-
-</div>
-
+<!-- FOOTER -->
 <footer class="footer">
 
     <h5>⚡ Hogwarts Portal ⚡</h5>
@@ -169,7 +164,6 @@ h1 {
     </small>
 
 </footer>
-
 
 </body>
 </html>
