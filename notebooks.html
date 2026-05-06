@@ -15,8 +15,14 @@ body {
 }
 
 /* MAIN LAYOUT */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+}
+
 .container {
     display: flex;
+    flex: 1;
 }
 
 /* SIDEBAR */
@@ -28,7 +34,6 @@ body {
     background: rgba(20, 15, 10, 0.95);
     border: 1px solid #c8a24a;
     box-shadow: 0 0 15px rgba(200,162,74,0.3);
-    height: calc(100vh - 40px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,9 +86,19 @@ body {
     background: #e0bb5c;
 }
 
+/* RIGHT SIDE */
+.right-side {
+    flex: 1;
+    margin: 20px 20px 20px 0;
+}
+
 /* MAIN */
 .main {
-    flex: 1;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #c8a24a;
+    background: rgba(15, 15, 15, 0.95);
+    min-height: calc(100vh - 40px);
 }
 
 /* TOPBAR */
@@ -149,16 +164,16 @@ body {
     background: linear-gradient(135deg, #2f4f2f, #c9a44c);
 }
 
+/* FOOTER */
 .footer {
     background: rgba(20, 15, 10, 0.95);
     border-top: 2px solid #c8a24a;
     color: #c8a24a;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
-    border-radius: 15px 15px 0 0;
     font-family: 'Cinzel', serif;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .footer h5 {
@@ -176,74 +191,82 @@ body {
     margin-top: 10px;
     color: #8f6b1d;
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
+    <div class="container">
 
-        <div>
-            <img src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/200?cb=20110806202805" class="logo">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
 
-            <h2>Hogwarts Portal</h2>
-            <small>School of Witchcraft & Wizardry</small>
+            <div>
+                <img src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/200?cb=20110806202805" class="logo">
 
-            <ul>
-                <li><a href="tasks.html">📜 Tasks</a></li>
-                <li><a href="dashboard.html">📁 Dashboard</a></li>
-                <li><a href="notebooks.html">📓 Spellbook</a></li>
-                <li><a href="profile.html">🧙 Profile</a></li>
-            </ul>
+                <h2>Hogwarts Portal</h2>
+                <small>School of Witchcraft & Wizardry</small>
+
+                <ul>
+                    <li><a href="tasks.html">📜 Tasks</a></li>
+                    <li><a href="dashboard.html">📁 Dashboard</a></li>
+                    <li><a href="notebooks.html">📓 Spellbook</a></li>
+                    <li><a href="profile.html">🧙 Profile</a></li>
+                </ul>
+            </div>
+
+            <a href="index.html" class="btn">➡️ Log out</a>
+
         </div>
 
-        <a href="index.html" class="btn">➡️ Log out</a>
+        <!-- RIGHT SIDE -->
+        <div class="right-side">
 
-    </div>
+            <!-- MAIN -->
+            <div class="main">
 
-    
-    <div class="main">
-
-        <div class="topbar">
-            <b>KAIENNE CAMLASCO</b>
-        </div>
-
-        <div class="container-cards">
-
-            <div class="card" onclick="openSubject('Potions')">
-                <div class="card-header potions"></div>
-                <div class="card-body">
-                    <h2>🧪 Potions</h2>
-                    <div class="teacher">Brewing • Ingredients • Magical mixtures</div>
+                <div class="topbar">
+                    <b>KAIENNE CAMLASCO</b>
                 </div>
-            </div>
 
-            <div class="card" onclick="openSubject('Defense Against the Dark Arts')">
-                <div class="card-header dada"></div>
-                <div class="card-body">
-                    <h2>🛡️ Defense Against the Dark Arts</h2>
-                    <div class="teacher">Spells • Protection • Dark creatures</div>
-                </div>
-            </div>
+                <div class="container-cards">
 
-            <div class="card" onclick="openSubject('Astronomy')">
-                <div class="card-header astronomy"></div>
-                <div class="card-body">
-                    <h2>🌌 Astronomy</h2>
-                    <div class="teacher">Stars • Planets • Night sky study</div>
-                </div>
-            </div>
+                    <div class="card" onclick="openSubject('Potions')">
+                        <div class="card-header potions"></div>
+                        <div class="card-body">
+                            <h2>🧪 Potions</h2>
+                            <div class="teacher">Brewing • Ingredients • Magical mixtures</div>
+                        </div>
+                    </div>
 
-            <div class="card" onclick="openSubject('Herbology')">
-                <div class="card-header herbology"></div>
-                <div class="card-body">
-                    <h2>🌿 Herbology</h2>
-                    <div class="teacher">Plants • Magical herbs • Greenhouse studies</div>
+                    <div class="card" onclick="openSubject('Defense Against the Dark Arts')">
+                        <div class="card-header dada"></div>
+                        <div class="card-body">
+                            <h2>🛡️ Defense Against the Dark Arts</h2>
+                            <div class="teacher">Spells • Protection • Dark creatures</div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="openSubject('Astronomy')">
+                        <div class="card-header astronomy"></div>
+                        <div class="card-body">
+                            <h2>🌌 Astronomy</h2>
+                            <div class="teacher">Stars • Planets • Night sky study</div>
+                        </div>
+                    </div>
+
+                    <div class="card" onclick="openSubject('Herbology')">
+                        <div class="card-header herbology"></div>
+                        <div class="card-body">
+                            <h2>🌿 Herbology</h2>
+                            <div class="teacher">Plants • Magical herbs • Greenhouse studies</div>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
 
         </div>
@@ -252,12 +275,7 @@ body {
 
 </div>
 
-<script>
-function openSubject(subject) {
-    alert("You opened " + subject + " 📖✨");
-}
-</script>
-
+<!-- FOOTER -->
 <footer class="footer">
 
     <h5>⚡ Hogwarts Portal ⚡</h5>
@@ -272,6 +290,11 @@ function openSubject(subject) {
 
 </footer>
 
+<script>
+function openSubject(subject) {
+    alert("You opened " + subject + " 📖✨");
+}
+</script>
 
 </body>
 </html>
