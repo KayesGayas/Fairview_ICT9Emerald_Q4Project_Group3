@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Tasks</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    background: radial-gradient(circle at top, #2a1a0f, #000);
+    color: #f5e6c8;
+}
+
+.container {
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 240px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 18px;
+    background: rgba(20, 15, 10, 0.95);
+    border: 1px solid #c8a24a;
+    box-shadow: 0 0 15px rgba(200,162,74,0.3);
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.logo {
+    width: 90px;
+}
+
+.sidebar small {
+    color: #c8a24a;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.sidebar ul li a {
+    color: #f5e6c8;
+    text-decoration: none;
+}
+
+.sidebar ul li:hover {
+    background: rgba(200,162,74,0.15);
+}
+
+.active {
+    background: #c8a24a;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn {
+    padding: 12px;
+    border-radius: 10px;
+    background: #c8a24a;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e0bb5c;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+h1 {
+    color: #c8a24a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="sidebar">
+
+<div>
+<img src="https://static.wikia.nocookie.net/harrypotter/images/a/ae/Hogwartscrest.png/revision/latest/scale-to-width-down/200?cb=20110806202805" class="logo">
+
+<h2>Hogwarts Portal</h2>
+<small>School of Witchcraft & Wizardry</small>
+
+<ul>
+
+<ul>
+        <li><a href="tasks.html">📜 Tasks</a></li>
+        <li><a href="dashboard.html">📁 Dashboard</a></li>
+        <li><a href="notebooks.html">📓 Spellbook</a></li>
+        <li><a href="profile.html">🧙 Profile</a></li>
+    </ul>
+</div>
+
+<a href="index.html" class="btn">➡️ Log out</a>
+
+</div>
+
+<div class="content">
+
+<h1>📜 Tasks</h1>
+<p>You have no task to do ✨</p>
+
+</div>
+
+</div>
+
+</body>
+</html>
