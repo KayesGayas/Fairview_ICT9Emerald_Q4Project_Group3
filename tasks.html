@@ -117,116 +117,37 @@ h1 {
 
 <body>
 
-    <div class="overlay">
-        
-        <div class="hogwarts-title">
-            <h1>HOGWARTS</h1>
-            <p>School of Witchcraft and Wizardy </p>
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div>
+            <img src="hogwarts logo.png" class="logo">
+
+            <h2>Hogwarts Portal</h2>
+            <small>School of Witchcraft & Wizardry</small>
+
+            <ul>
+                <li><a href="tasks.html">📜 Tasks</a></li>
+                <li><a href="dashboard.html">📁 Dashboard</a></li>
+                <li><a href="notebooks.html">📓 Spellbook</a></li>
+                <li><a href="profile.html">🧙 Profile</a></li>
+            </ul>
         </div>
 
-        <!-- Form -->
-        <div class="card p-4 shadow">
+        <a href="index.html" class="btn">➡️ Log out</a>
 
-            <!--Logo-->
-
-            <center>
-            <img src="hogwarts logo.png" style="height: 135px; width: 135px; display: block; margin:0px">
-              </center>
-
-        <br>
-
-            <!-- Username -->
-            <label for="user_" class="form-label">Username</label>
-            <input type="text" id="user_" class="form-control mb-3" placeholder="Input Username">
-
-            <!-- Password -->
-            <label for="pass_" class="form-label">Password</label>
-            <input type="password" id="pass_" class="form-control mb-3" placeholder="Input Password">
-
-            <!-- Checkbox -->
-            <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" id="staylog" onclick="messagepop()">
-
-             <label class="form-check-label" for="staylog" style="color:white;"> Stay logged in </label>
-            </div>
-
-            <p id="note"></p>
-
-            <!-- Buttons -->
-            <div class="d-flex justify-content-between mt-3"> <button id="logbtn"  type="button" class="btn w-50 me-2"style="background-color:#FDDA0D; color:black;" onclick="verifier()">Login</button>
-                
-            <button class="btn btn-light w-50" type="reset">Cancel</button>
-             </div>
-
-            <div id="message" class="text-center mt-3"></div>
-        </div>
     </div>
 
-    <script>
+    <!-- CONTENT -->
+    <div class="content">
 
-    function messagepop(){
+        <h1>📜 Tasks</h1>
+        <p>You have no task to do ✨</p>
 
-        let staylog = document.getElementById("staylog").checked;
-        let note = document.getElementById("note");
+    </div>
 
-        if(staylog){
-            note.innerHTML = "Your session will be saved on this device";
-        }
-
-        else{
-            note.innerHTML = "";
-        }
-    }
-
-    let attempt_counter = 0;
-
-    function verifier(){
-
-        let username = document.getElementById("user_").value;
-        let pwd = document.getElementById("pass_").value;
-
-        let granted =
-        "You have successfully logged in. Welcome back to Hogwarts, " + username + "!";
-
-        let denied =
-        "Login unsuccessful. Account locked after 3 attempts!";
-
-        // empty boxes
-        if(username === "" || pwd === ""){
-            alert("Please fill out the form.");
-            return;
-        }
-
-        //verify
-        if(username === "Kaienne Camlasco" &&
-        pwd === "camlasco_2391"){
-
-            alert(granted);
-
-            attempt_counter = 0;
-
-            document.getElementById("message").innerHTML = "";
-
-            window.location.href = "notebooks.html";
-        }
-
-        else{
-
-            attempt_counter++;
-
-            document.getElementById("message").innerHTML =
-            "Incorrect username and/or password. Attempt "
-            + attempt_counter + " of 3";
-
-            if(attempt_counter >= 3){
-
-                alert(denied);
-
-                document.getElementById("logbtn").disabled = true;
-            }
-        }
-    }
-    </script>
 </div>
 
 <!-- FOOTER -->
